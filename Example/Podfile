@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EFExpandableCollectionView_Example' do
+  pod 'EFExpandableCollectionView', :path => '../'
+
+  target 'EFExpandableCollectionView_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
