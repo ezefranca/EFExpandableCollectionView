@@ -1,0 +1,22 @@
+{
+  "name": "EFExpandableCollectionView",
+  "version": "0.1.0",
+  "summary": "A short description of EFExpandableCollectionView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ezefranca/EFExpandableCollectionView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ezefranca": "ezequiel.santos@btgpactual.com"
+  },
+  "source": {
+    "git": "https://github.com/ezefranca/EFExpandableCollectionView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EFExpandableCollectionView/Classes/**/*"
+}

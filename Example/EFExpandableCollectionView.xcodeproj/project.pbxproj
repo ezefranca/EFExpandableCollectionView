@@ -15,6 +15,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		96B5DC4202B9108A0DB85416 /* Pods_EFExpandableCollectionView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDAAB800CE6B2E5C6536D02 /* Pods_EFExpandableCollectionView_Tests.framework */; };
+		B6BB96D11F72AE7A0061FDDD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB96CF1F72AE7A0061FDDD /* CollectionViewCell.swift */; };
+		B6BB96D21F72AE7A0061FDDD /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BB96D01F72AE7A0061FDDD /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +31,8 @@
 
 /* Begin PBXFileReference section */
 		18B97683BFA285A53D400BA0 /* Pods_EFExpandableCollectionView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFExpandableCollectionView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2365E65C4ECB1E9F33A8B77B /* EFExpandableCollectionView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EFExpandableCollectionView.podspec; path = ../EFExpandableCollectionView.podspec; sourceTree = "<group>"; };
-		23BFBD88125F1EB6636AFECB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2365E65C4ECB1E9F33A8B77B /* EFExpandableCollectionView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EFExpandableCollectionView.podspec; path = ../EFExpandableCollectionView.podspec; sourceTree = "<group>"; };
+		23BFBD88125F1EB6636AFECB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		494CAC682C370E7998F31E3D /* Pods-EFExpandableCollectionView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFExpandableCollectionView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFExpandableCollectionView_Tests/Pods-EFExpandableCollectionView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EFExpandableCollectionView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFExpandableCollectionView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,8 +44,10 @@
 		607FACE51AFB9204008FA782 /* EFExpandableCollectionView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EFExpandableCollectionView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7BBF2758C8F4FE15FBDC2C3E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7BBF2758C8F4FE15FBDC2C3E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A4D609EF986956CC4BC8E2B7 /* Pods-EFExpandableCollectionView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFExpandableCollectionView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFExpandableCollectionView_Tests/Pods-EFExpandableCollectionView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6BB96CF1F72AE7A0061FDDD /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B6BB96D01F72AE7A0061FDDD /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		C9CF440765E340C0DE082B8A /* Pods-EFExpandableCollectionView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFExpandableCollectionView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFExpandableCollectionView_Example/Pods-EFExpandableCollectionView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DDBB179C0F1B97D6E8254EAC /* Pods-EFExpandableCollectionView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFExpandableCollectionView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFExpandableCollectionView_Example/Pods-EFExpandableCollectionView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DDDAAB800CE6B2E5C6536D02 /* Pods_EFExpandableCollectionView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFExpandableCollectionView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,7 @@
 		607FACD21AFB9204008FA782 /* Example for EFExpandableCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				B6BB96D31F72AE810061FDDD /* Cell */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -157,6 +162,15 @@
 				23BFBD88125F1EB6636AFECB /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B6BB96D31F72AE810061FDDD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B6BB96CF1F72AE7A0061FDDD /* CollectionViewCell.swift */,
+				B6BB96D01F72AE7A0061FDDD /* CollectionViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,10 +229,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2MK765758P;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2MK765758P;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -250,6 +266,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				B6BB96D21F72AE7A0061FDDD /* CollectionViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +380,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B6BB96D11F72AE7A0061FDDD /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +514,9 @@
 			baseConfigurationReference = DDBB179C0F1B97D6E8254EAC /* Pods-EFExpandableCollectionView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2MK765758P;
 				INFOPLIST_FILE = EFExpandableCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,7 +530,9 @@
 			baseConfigurationReference = C9CF440765E340C0DE082B8A /* Pods-EFExpandableCollectionView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2MK765758P;
 				INFOPLIST_FILE = EFExpandableCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -523,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4D609EF986956CC4BC8E2B7 /* Pods-EFExpandableCollectionView_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2MK765758P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -543,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 494CAC682C370E7998F31E3D /* Pods-EFExpandableCollectionView_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2MK765758P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

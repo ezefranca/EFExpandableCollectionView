@@ -1,0 +1,6 @@
+framework module EFExpandableCollectionView {
+  umbrella header "EFExpandableCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}
