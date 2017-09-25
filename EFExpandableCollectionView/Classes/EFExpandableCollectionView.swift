@@ -84,7 +84,11 @@ public class EFExpandableCollectionViewController: UICollectionViewController, U
         
         cell.layoutSubviews()
         if _expandedsIndexPath.contains(indexPath) {
-            collectionView.collectionViewLayout.invalidateLayout()
+            let context = UICollectionViewFlowLayoutInvalidationContext()
+            context.invalidateFlowLayoutAttributes = true
+            context.invalidateFlowLayoutDelegateMetrics = true
+            collectionView.collectionViewLayout.invalidateLayout(with: context)
+            collectionView.setCollectionViewLayout(collectionView.collectionViewLayout, animated: false)
         }
         
         _delegate.expandableCollectionViewController(collectionView, willDisplay: cell, forItemAt: indexPath)
