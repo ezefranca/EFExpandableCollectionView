@@ -20,9 +20,9 @@ public protocol EFExpandableCollectionViewDelegate {
     
     func expandableCollectionViewController(numberOfSections in: UICollectionView?) -> Int
     func expandableCollectionViewController(_ collectionView: UICollectionView, numberOfItemsInSection _: Int) -> Int
-    func expandableCollectionViewController(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    func expandableCollectionViewController(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath,isExpanded:Bool) -> UICollectionViewCell
     func expandableCollectionViewController(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
-    func expandableCollectionViewController(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    func expandableCollectionViewController(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath, isExpanded:Bool)
     func expandableCollectionViewController(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath, isExpanded:Bool) -> CGSize
     func expandableCollectionViewController(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, minimumLineSpacingForSectionAt _: Int) -> CGFloat
     func expandableCollectionViewController(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, minimumInteritemSpacingForSectionAt _: Int) -> CGFloat
@@ -44,7 +44,6 @@ public class EFExpandableCollectionViewController: UICollectionViewController, U
         didSet {
             self.collectionView?.dataSource = self
             self.collectionView?.delegate = self
-            self.collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         }
     }
     
@@ -52,6 +51,10 @@ public class EFExpandableCollectionViewController: UICollectionViewController, U
         get {
             return _expandedsIndexPath
         }
+    }
+    
+    public func closeAll() {
+        self._expandedsIndexPath = [IndexPath]()
     }
     
     override public func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -72,7 +75,7 @@ public class EFExpandableCollectionViewController: UICollectionViewController, U
             collectionView.collectionViewLayout.invalidateLayout()
         }
         
-        return _delegate.expandableCollectionViewController(collectionView, cellForItemAt: indexPath)
+        return _delegate.expandableCollectionViewController(collectionView, cellForItemAt: indexPath , isExpanded:  _expandedsIndexPath.contains(indexPath))
     }
     
     override public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -113,12 +116,25 @@ public class EFExpandableCollectionViewController: UICollectionViewController, U
         
         if _expandedsIndexPath.contains(indexPath) { _expandedsIndexPath.remove(indexPath) }
         else { _expandedsIndexPath.append(indexPath) }
+
+        _delegate.expandableCollectionViewController(collectionView, didSelectItemAt: indexPath, isExpanded:  _expandedsIndexPath.contains(indexPath))
+
         
-        collectionView.performBatchUpdates({
-            collectionView.collectionViewLayout.invalidateLayout()
-        }) { (finish) in
-            _delegate.expandableCollectionViewController(collectionView, didSelectItemAt: indexPath)
-        }
+     
+//
+        
+        
+//        collectionView.performBatchUpdates({
+//            collectionView.collectionViewLayout.invalidateLayout()
+        
+//            UIView.animate(withDuration: 0.3, animations: { 
+//
+//                collectionView.collectionViewLayout.invalidateLayout()
+//            })
+//            
+//        }) { (finish) in
+//
+//        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
