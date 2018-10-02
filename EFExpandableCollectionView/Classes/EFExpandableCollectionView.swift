@@ -107,7 +107,7 @@ public class EFExpandableCollectionViewController: UICollectionViewController, U
     }
     
     private func scroolToBottom(_ collectionView: UICollectionView, index: IndexPath) {
-        collectionView.scrollToItem(at: index, at: UICollectionViewScrollPosition.bottom, animated: true)
+        collectionView.scrollToItem(at: index, at: UICollectionView.ScrollPosition.bottom, animated: true)
     }
     
     override public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

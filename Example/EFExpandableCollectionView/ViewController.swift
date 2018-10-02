@@ -27,7 +27,7 @@ class ViewController: UIViewController {
                 self.view.addSubview(_collectionView)
         }
         
-        self.addChildViewController(collectionViewController)
+        self.addChild(collectionViewController)
         collectionViewController.collectionView?.reloadData()
     }
     
@@ -37,6 +37,18 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : EFExpandableCollectionViewDelegate {
+    
+    func expandableCollectionViewController(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath, isExpanded: Bool) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        return cell
+        
+    }
+    
+    func expandableCollectionViewController(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath, isExpanded: Bool) {
+         print("tapped cell at index \(indexPath.row)")
+    }
+    
     
     func expandableCollectionViewController(numberOfSections in: UICollectionView?) -> Int {
         return 1
@@ -50,11 +62,6 @@ extension ViewController : EFExpandableCollectionViewDelegate {
         return
     }
     
-    func expandableCollectionViewController(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        return cell
-    }
     
     func expandableCollectionViewController(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath, isExpanded: Bool) -> CGSize {
         
@@ -72,11 +79,6 @@ extension ViewController : EFExpandableCollectionViewDelegate {
     
     func expandableCollectionViewController(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, minimumLineSpacingForSectionAt _: Int) -> CGFloat {
         return view.frame.size.height * 0.02
-    }
-    
-    
-    func expandableCollectionViewController(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tapped cell at index \(indexPath.row)")
     }
     
 }

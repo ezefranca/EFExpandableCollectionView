@@ -1,23 +1,16 @@
 PODS:
   - EFExpandableCollectionView (0.1.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
 
 DEPENDENCIES:
   - EFExpandableCollectionView (from `../`)
-  - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
   EFExpandableCollectionView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  EFExpandableCollectionView: fa189c5afc6f49dff2f7ec206ef4b6a2c73cdb38
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  EFExpandableCollectionView: a2e284ceb331e8efe9535451843b83fa12b5de28
 
-PODFILE CHECKSUM: d5359b7ef85ea2370b5997c78013d5e4e5ea7c49
+PODFILE CHECKSUM: 8c1c16523892d3b69dd53b1f77d2a8757f11565f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
